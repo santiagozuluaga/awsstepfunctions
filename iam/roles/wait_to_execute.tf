@@ -4,6 +4,7 @@ module "wait_to_execute" {
   name = "wait-to-execute"
 
   policy_arns = [
+    module.policies.wait_to_execute.arn,
     module.policies.awsstepfunctions_cloudwatch_logs.arn
   ]
 }

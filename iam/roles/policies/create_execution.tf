@@ -6,11 +6,11 @@ resource "aws_iam_policy" "create_execution" {
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Effect": "Allow",
       "Action": [
         "states:StartExecution"
       ],
-      "Resource": "arn:aws:states:${var.inputs.config.region}:${var.inputs.config.account_id}:*",
-      "Effect": "Allow"
+      "Resource": "arn:aws:states:${var.inputs.config.region}:${var.inputs.config.account_id}:*"
     }
   ]
 }

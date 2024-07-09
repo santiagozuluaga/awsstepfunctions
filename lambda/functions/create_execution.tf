@@ -16,7 +16,7 @@ resource "aws_lambda_function" "create_execution" {
 
   environment {
     variables = {
-      STATE_MACHINE_ARN = "arn:aws:states:*:*:stateMachine:WaitToExecute"
+      STATE_MACHINE_ARN = "arn:aws:states:${var.inputs.config.region}:${var.inputs.config.account_id}:stateMachine:WaitToExecute"
     }
   }
 }

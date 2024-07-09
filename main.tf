@@ -28,6 +28,10 @@ module "lambda" {
   depends_on = [module.iam]
 
   inputs = {
+    config = {
+      account_id = var.account_id
+      region     = var.region
+    }
     modules = {
       iam = module.iam.roles
     }

@@ -6,13 +6,13 @@ resource "aws_iam_policy" "awsstepfunctions_cloudwatch_logs" {
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Effect": "Allow",
       "Action": [
         "logs:CreateLogGroup",
         "logs:CreateLogStream",
         "logs:PutLogEvents"
       ],
-      "Resource": "arn:aws:logs:${var.inputs.config.region}:${var.inputs.config.account_id}:*",
-      "Effect": "Allow"
+      "Resource": "arn:aws:logs:${var.inputs.config.region}:${var.inputs.config.account_id}:*"
     }
   ]
 }

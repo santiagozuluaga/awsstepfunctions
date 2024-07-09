@@ -1,5 +1,5 @@
 module "handle_execution" {
-  source = "../../shared/role"
+  source = "../../shared/role/lambda"
 
   name = "handle-execution"
 

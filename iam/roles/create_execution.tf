@@ -1,5 +1,5 @@
 module "create_execution" {
-  source = "../../shared/role"
+  source = "../../shared/role/lambda"
 
   name = "create-execution"
 

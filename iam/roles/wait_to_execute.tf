@@ -1,5 +1,5 @@
 module "wait_to_execute" {
-  source = "../../shared/role"
+  source = "../../shared/role/states"
 
   name = "wait-to-execute"
 
